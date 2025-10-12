@@ -1,0 +1,23 @@
+# AWS Configuration
+aws_region = "us-east-1"
+
+# VPC Configuration - REQUIRED
+# Use public subnets (recommended) OR private subnets with NAT Gateway
+vpc_id     = "vpc-xxxxxxxxxxxxxxxxx"
+subnet_ids = ["subnet-xxxxxxxxxxxxxxxxx", "subnet-yyyyyyyyyyyyyyyyy"]
+
+# Slack Configuration - REQUIRED
+# Get Workspace ID: AWS Chatbot Console → Your workspace → Copy Workspace ID
+# Get Channel ID: Slack → Right-click channel → Copy Link → Extract ID from URL
+slack_workspace_id = "T01XXXXXXXXX"  # Format: T01XXXXXXXX
+slack_channel_id   = "C09XXXXXXXXX"  # Format: C09XXXXXXXX
+
+# Optional: Customize project name
+# project_name = "steampipe-aws-monitor"
+
+# Optional: Custom tags (applied to all resources via provider default_tags)
+tags = {
+  Project     = "steampipe-aws-monitor"
+  Environment = "production"
+  Owner       = "your-name"
+}
